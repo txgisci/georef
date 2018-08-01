@@ -30,7 +30,7 @@ tform = tf.AffineTransform(scale=(1.3, 1.1), rotation=0.5,
                            translation=(0, -200))
 img3 = tf.warp(img1, tform)
 
-descriptor_extractor = ORB(n_keypoints=300)
+descriptor_extractor = ORB(n_keypoints=10)
 
 descriptor_extractor.detect_and_extract(img1)
 keypoints1 = descriptor_extractor.keypoints
@@ -65,3 +65,8 @@ ax[1].set_title("Original Image vs. Transformed Image")
 
 
 plt.show()
+
+
+def georeference(georefed, to_georef):
+    new_georef = []
+    return new_georef
